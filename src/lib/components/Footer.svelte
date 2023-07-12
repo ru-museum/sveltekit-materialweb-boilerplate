@@ -15,7 +15,7 @@
          <mwc-icon style="vertical-align:middle;">
             <AccountBalance size="1em" color="#fff" />
          </mwc-icon>
-		     { pre.title }
+		      {pre.title} 
 	     </h2>
 	  </div>
 
@@ -23,11 +23,12 @@
         <mwc-icon style="vertical-align:middle;">
            <MailOutline size="1em" color="#fff" />
         </mwc-icon>
-        {@html pre.mail }
+        {@html pre.mail} 
 	  </div>
 	  
 	  <div class="copy">
-        &copy; 2007 - { pre.year }&nbsp;&nbsp;&nbsp;{ pre.name }
+        {pre.name} <br>
+        &copy; 2022 - {pre.year} 
 	  </div>
 
   </article>
@@ -39,10 +40,10 @@
 
    .admin, .copy {
 	   text-align:center;
-      color: #ccc; 
+     color: #ccc; 
    }
    .copy{
-		padding: 10px 0px 40px 0px;
+		 padding: 10px 0px 40px 0px;
    }
 
    .footer{
@@ -64,7 +65,7 @@
 		padding: 0 0 0 1.5em;
 		margin: 0 0 0.5em 24px;
 		line-height: 1.2;
-      color: #ccc; 
+    color: #ccc; 
 	}
 
 </style>

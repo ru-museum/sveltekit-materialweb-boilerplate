@@ -1,4 +1,4 @@
-# sveltekit-materialweb-boilerplate
+の# sveltekit-materialweb-boilerplate
 Boilerplate for Sveltekit with Material-Web(MWC v0.27.0)
 
 # 準備中です(In Preparation)。
@@ -11,9 +11,6 @@ Boilerplate for Sveltekit with Material-Web(MWC v0.27.0)
 - メニューは自動で生成され増減を自由にカスタマイズ出来ます。　
 - ページの増減は **Sveltekit** に準じています。
 - 一部旧版のパッケージを使用している部分があります(@material/card, @material/layout-grid)。
-- 
-- 
-- 
 
 # TODO
 - **layout-grid** による画像表示。
@@ -31,17 +28,14 @@ Boilerplate for Sveltekit with Material-Web(MWC v0.27.0)
 │  ◻ Add Prettier for code formatting
 ```
 
-1. 新規の project を以下によりCRONするかZIPファイルをダウンロードします。
+## 1. 新規 project 作成 
+- 以下により **CRON** するか **ZIPファイル**をダウンロードします。
 ```
 npx degit ru-museum/sveltekit-materialweb-boilerplate#main svelte-app
 cd svelte-app
 npm install
-
-npm run dev      // localhost:5173
-npm run build
-npm run preview  // localhost:4173
 ```
-2. 生成されたファイル構成は以下の様になっています。
+## ファイル構成
 ```
 ├── SRC
 │   ├── assets
@@ -90,8 +84,35 @@ npm run preview  // localhost:4173
     ├── favicon.png
     └── robots.txt
 ```
-- **material-icons** は最小限度に止めてありますので、必要な場合はダウンロードし **_index.js** の記述に倣い導入して下さい。 
-- 他のパッケージの icon も SVG ファイルを
-3.
-4. 
-5.
+- **material-icons** は最小限に止めてありますので、必要な場合はダウンロードし **_index.js** 及び以下のの記述に倣い導入して下さい。 
+- 他のパッケージの icon(svg) も 同様に使用出来ます。
+## アイコンファイル(.svelte)作成例
+【SVG アイコン】.svg  
+```
+<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><g>....(略)...</svg>
+```
+【アイコンファイル】.svelte
+```
+<script>
+  export let size = "1em";
+  export let color = "currentColor";
+  export let viewBox = "0 0 24 24";
+</script>
+<svg fill={color} width="{size}" height="{size}" viewBox="{viewBox}"><g>....(略)...</svg> 
+```
+## 3. 動作確認とビルド
+```
+npm run dev      // localhost:5173
+npm run build
+npm run preview  // localhost:4173
+```
+## build されたファイル構成
+```
+build 
+└── _app
+    ├── about.html
+    ├── favicon.png
+    ├── index.html
+    ├── robots.txt
+    └── work.html
+```

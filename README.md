@@ -31,7 +31,7 @@ Boilerplate for Sveltekit with Material-Web(MWC v0.27.0)
 ## 1. 新規 project 作成 
 - 以下により **CRON** するか **ZIPファイル**をダウンロードします。
 ```
-npx degit ru-museum/sveltekit-materialweb-boilerplate#main svelte-app
+npx degit ru-museum/sveltekit-materialweb-boilerplate svelte-app
 cd svelte-app
 npm install
 ```

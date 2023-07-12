@@ -29,6 +29,8 @@ npx degit ru-museum/sveltekit-materialweb-boilerplate#main svelte-app
 cd svelte-app
 npm install
 ```
+- **#main** の指定が必要。
+
 ## ファイル構成
 ```
 ├── SRC
@@ -103,10 +105,23 @@ npm run preview  // localhost:4173
 ## build されたファイル構成
 ```
 build 
-└── _app
-    ├── about.html
-    ├── favicon.png
-    ├── index.html
-    ├── robots.txt
-    └── work.html
+├── _app
+├── data
+│   └── data-items.json
+├── images
+│   ├── sample1.png
+│   ├── sample2.png
+│   └── sample3.png
+├── about.html
+├── favicon.png
+├── index.html
+├── robots.txt
+└── work.html
+```
+## 3. 公開テスト
+- 公開するにはフォルダ **build** 以下をサーバーへ設置します。
+-  **build** 以外の**任意のフォルダ**で検証するにはサーバーを立てる必要があります。
+## ローカルサーバーでのテスト：Ruby
+```
+# ruby -rwebrick -e 'WEBrick::HTTPServer.new(:DocumentRoot => "./", :Port => 8000).start'
 ```

@@ -4,8 +4,8 @@
   export let pre; // layout.js - presets
   import { onMount } from 'svelte';
 
+  import menues from '$lib/data/menues.js';
   import AccordionMenu from './AccordionMenu.svelte';
-  // import ToTopButton   from './ToTopButon.svelte';
 
   import { AccountBalance, Bookmark, Close, Edit, Folder, Help, MenuButton, 
            MoreVert, Info, Person } from '../../assets/material-icons/_index';
@@ -13,14 +13,14 @@
   import '@material/mwc-drawer';
   import '@material/mwc-button';
   import '@material/mwc-icon-button';
-  import '@material/mwc-top-app-bar-fixed';
-  import '@material/mwc-list';
   import '@material/mwc-menu';
-  // import '@material/mwc-icon-button-toggle';
+  import '@material/mwc-list';
+  import '@material/mwc-top-app-bar-fixed';
 
   var drawer;
-  onMount(() => {
+	onMount(async () => {
 
+    /** DRAWER ACTION */
     drawer = document.getElementsByTagName('mwc-drawer')[0];
     if (drawer) {
         const container = drawer.parentNode;
@@ -29,14 +29,15 @@
         });
     }
 
-    // MENU-BUTTONS ACTION
+    /** MENU-BUTTONS ACTION */
     for (var i = 0; i < menues.length; i++) {
-    　　// eval("var num_" + i + "=" + i + ";");
-       eval("menu"   + i + ".anchor = button" + i + ";");
-       eval("button" + i + ".addEventListener('click', function (e){ menu" 
-                     + i + ".open = true; });" );
+       let str1 = "menu" + i + ".anchor = button" + i + ";";
+       let str2 = "button" + i + ".addEventListener('click', function(e){menu" 
+                           + i + ".open=true;});";
+       eval(str1); eval(str2);
     }
-
+    
+    /** MENU-INFOMATION-BUTTONS ACTION */
     menuInfo.anchor = info;
     info.addEventListener('click', function (e) {
       menuInfo.open = true;
@@ -44,87 +45,12 @@
     });
     
   });
-  
-  
-  function looseJsonParse(obj){
-    return Function('"use strict";return (' + obj + ')')();
+
+  /** MENU => CLOSE */
+  function closeMenu(i){
+    eval("menu" + i + ".open = false;");
   }
- 
- 	const menues = [
-		{
-			category: 'WORK',
-			items: [
-					      {name:"HOME", ref:"/"},
-      					{name:"WORK", ref:"work"},
-					      {name:"ABOUT", ref:"about"},
-					      {name:"PAGE01", ref:"page01"},
-					      {name:"PAGE02", ref:"page02"},
-					      {name:"PAGE03", ref:"page03"},
-					      {name:"PAGE04", ref:"page04"},
-					      {name:"RusKeyboard", ref:"rus-keyboard"}
-       			 ]
-		},
-		{
-			category: '情 報',
-			items: [
-      					{name:"●ロシアの美術館・博物館", ref:"info-museums"},
-					      {name:"ロシア美術関係リンク", ref:"none"},
-					      {name:"ロシア新聞記事：文化", ref:"none"},
-					      {name:"ロシア新聞記事：社会", ref:"none"},
-					      {name:"ロシア新聞記事：デジタル", ref:"none"}
-       			 ]
-		},
-		{
-			category: '資 料',
-			items: [
-                 {name:"Work", ref:"work"},
-                 {name:"Page01", ref:"page01"},
-                 {name:"●ヴェレシチャーギン資料", ref:"resources-vere"},
-                 {name:"●日露関係資料", ref:"resources-rujp"},
-                 {name:"デジタル資料収集方法", ref:"none"}, // resources-digital
-                 {name:"資料レポジトリ", ref:"none"}
-       			 ]
-		},
 
-		{
-			category: 'ロシア語',
-			items: [
-                 {name:"Lists", ref:"none"},
-                 {name:"ロシアのテレビ・ラジオ", ref:"none"},
-                 {name:"ロシア現代用語", ref:"none"},
-                 {name:"ロシア語用ソフト", ref:"soft"}
-       			 ]
-		},
-
-		{
-			category: 'LINUX',
-			items: [
-                 {name:"●LINUXでロシア語使用方法", ref:"linux-rus"},
-	  		         {name:"LINUX-Tips", ref:"linux-tips"},
-                 {name:"Debian Install Tutorial", ref:"none"}
-       			 ]
-		},
-
-		{
-			category: 'LINUXII',
-			items: [
-                {name:"●LINUXでロシア語使用方法", ref:"linux-rus"},
-				      	{name:"●LINUX-Tips", ref:"linux-tips"},
-                {name:"Debian Install Tutorial", ref:"none"}
-              ]      
-    },
-    
-		{
-			category: 'Programing',
-			items: [
-               {name:"Lists", ref:"none"},
-               {name:"ロシアのテレビ・ラジオ", ref:"none"},
-               {name:"ロシア現代用語", ref:"none"},
-               {name:"ロシア語用ソフト", ref:"soft"}
-       			 ]
-		}
-		
-	]
 </script>
 
 <mwc-drawer hasHeader type="modal">
@@ -159,6 +85,10 @@
               <MenuButton />
             </mwc-icon-button>
             
+<!--
+            <mwc-icon-button icon="menu" slot="navigationIcon"></mwc-icon-button>
+            -->
+            
             <div slot="title" 
                  style="cursor:pointer;">
               <a href="/" rel="noreferrer" style="color:white;"> 
@@ -173,7 +103,8 @@
                             raised 
                             label="{category}" 
                             slot="actionItems"></mwc-button>
-                <mwc-menu fixed id="menu{i}" corner="BOTTOM_START">
+                <mwc-menu fixed id="menu{i}" corner="BOTTOM_START"
+                          on:click="{()=>{closeMenu(i)}}">
 
           	      {#each items as {name,ref}}    
                      <a href="{ref}" rel="noreferrer">
@@ -248,16 +179,12 @@
 
 <style>
 
-/* 
- lang="scss"
-
-@media(min-width:751px){*/
-@media(max-width:950px){
-  .display{
-    /*display:none;*/
-    visibility: hidden;
+  @media(max-width:950px){
+    .display{
+      /*display:none;*/
+      visibility: hidden;
+    }
   }
-}
 
   .close{
     border-radius:6px;
@@ -305,6 +232,3 @@
   }
 
 </style>
-
-
-

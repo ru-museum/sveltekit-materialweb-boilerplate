@@ -4,20 +4,20 @@
   import '@material/mwc-list/mwc-list-item';
 
   // NAVBAR-DRAWER に実行権を渡す: drawer.open=false 
-	import { createEventDispatcher, onDestroy } from 'svelte';
-	const dispatch = createEventDispatcher();
-	const close = () => dispatch('close');
+  import { createEventDispatcher, onDestroy } from 'svelte';
+  const dispatch = createEventDispatcher();
+  const close = () => dispatch('close');
 
-	import { fly } from "svelte/transition";
-	import { ArrowForward, Bookmark, Folder } from "../../assets/material-icons/_index";
+  import { fly } from "svelte/transition";
+  import { ArrowForward, Bookmark, Folder } from "../../assets/material-icons/_index";
 
-	// export let entry;
-	export let category;
-	export let items;
+  // export let entry;
+  export let category;
+  export let items;
 
-	let isOpen = false
-	const toggle = () => isOpen = !isOpen
-	let bmColor = "#aed581";
+  let isOpen = false
+  const toggle = () => isOpen = !isOpen
+  let bmColor = "#aed581";
 
 </script>
 
@@ -63,7 +63,8 @@
                   class="open-list">
 	        {#each items as {name, ref}}
             <a href="{ref}" rel="noreferrer">
-                <mwc-list-item hasMeta on:keydowny>
+                <mwc-list-item hasMeta on:click="{()=>close()}">
+<!--                <mwc-list-item hasMeta on:click="{()=>{close,drawer.open=false}">-->
                   <span>{name}</span>
                   <mwc-icon slot="meta" class="open-list-icon">
                      <span><ArrowForward color="gray"/></span>
@@ -129,4 +130,3 @@
   }
   
 </style>
-

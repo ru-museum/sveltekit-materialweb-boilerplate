@@ -1,4 +1,4 @@
-の# sveltekit-materialweb-boilerplate
+# sveltekit-materialweb-boilerplate
 Boilerplate for Sveltekit with Material-Web(MWC v0.27.0)
 
 # 準備テスト中です(In Preparation)。

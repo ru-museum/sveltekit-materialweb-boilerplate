@@ -11,7 +11,7 @@ Boilerplate for Sveltekit with Material-Web(MWC v0.27.0)
 - メニューは自動で生成され増減を自由にカスタマイズ出来ます。　
 - ページの増減は **Sveltekit** に準じています。
 # 使用方法
-1. これは以下の方法で基礎となる **Sveltekit** を生成しています。
+1. **Sveltekit** を生成します。
 ```
  npm create svelte@latest test01
 
@@ -23,9 +23,78 @@ Boilerplate for Sveltekit with Material-Web(MWC v0.27.0)
 │  ◻ Add Prettier for code formatting
 ```
 
+1. 新規の project を生成します。
+```
+npx degit ru-museum/sveltekit-materialweb-boilerplate#main svelte-app
+cd svelte-app
+npm install
+
+npm run dev      // localhost:5173
+npm run build
+npm run preview  // localhost:4173
+```
+2. ダウンロードしたファイルを入れ替えます。
+```
+├── SRC
+│   ├── assets
+│   │   ├── images
+│   │   │   └── sample1.png
+│   │   └── material-icons
+│   │       ├── _index.js
+│   │       ├── account-balance.svelte
+│   │       ├── arrow-forward.svelte
+│   │       ├── bookmark.svelte
+│   │       ├── close.svelte
+│   │       ├── edit.svelte
+│   │       ├── help.svelte
+│   │       ├── info.svelte
+│   │       ├── menu.svelte
+│   │       ├── more-vert.svelte
+│   │       └── person.svelte
+│   ├── lib
+│   │   ├── components
+│   │   │   ├── AccordionMenu.svelte
+│   │   │   ├── Breadcrumb.svelte
+│   │   │   ├── Footer.svelte
+│   │   │   ├── Loading.svelte
+│   │   │   ├── Navbar.svelte
+│   │   │   └── ToTopButon.svelte
+│   │   ├── data
+│   │   │   └── menues.js
+│   │   └── images
+│   │       ├── github.svg
+│   │       └── svelte-logo.svg
+│   ├── routes
+│   │   ├── about
+│   │   │   ├── +page.js
+│   │   │   └── +page.svelte
+│   │   └── work
+│   │   │   ├── +page.js
+│   │   │   └── +page.svelte
+│   │   ├── +layout.js
+│   │   ├── +layout.svelte
+│   │   ├── +page.js
+│   │   ├── +page.svelte
+│   │   ├── Header.svelte
+│   │   └── styles.css
+│   ├── app.d.ts
+│   └── app.html
+└── static
+    ├── data
+    │   └── data-items.json
+    └── images
+    │   ├── sample1.png
+    │   ├── sample2.png
+    │   └── sample3.png
+    ├── favicon.png
+    └── robots.txt
 
 
 
-4.
-5. 
-6.
+
+```
+
+
+3.
+4. 
+5.

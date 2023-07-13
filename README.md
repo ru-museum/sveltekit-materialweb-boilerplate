@@ -95,7 +95,7 @@ npm install
 </script>
 <svg fill={color} width="{size}" height="{size}" viewBox="{viewBox}"><g>....(略)...</svg> 
 ```
-## 3. 動作確認とビルド
+## 2. 動作確認とビルド
 ```
 npm run dev      // localhost:5173
 npm run build
@@ -117,7 +117,7 @@ build
 ├── robots.txt
 └── work.html
 ```
-## 2. 公開テスト
+## 3. 公開テスト
 - 公開するにはフォルダ **build** 以下をサーバーへ設置します。
 -  **build** 以外の**任意のフォルダ**で検証するにはサーバーを立てる必要があります。
 ## ローカルサーバーでのテスト：Ruby

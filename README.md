@@ -6,7 +6,8 @@ Boilerplate for Sveltekit with Material-Web(MWC v0.27.0)
 - **Material-Web** は最新版が現時点では未整備で完全ではない為に v0.27.0 版を使用しています。
 - メニューは自動で生成され増減を自由にカスタマイズ出来ます。　
 - ページの増減は **Sveltekit** に準じています。
-- 一部旧版のパッケージを使用している部分があります(@material/card, @material/layout-grid)。
+- 主な使用パッケージは **Drawer** 及び **Top-App-Bar** です。  
+  <!--新版では Deprecated となっている旧版のパッケージを一部使用している部分があります(card, layout-grid)。-->
 
 # 使用方法
 - この **Boilerplate** の **Sveltekit** は以下により生成されています。

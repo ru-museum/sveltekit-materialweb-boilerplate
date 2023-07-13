@@ -18,7 +18,7 @@ export function load() {
     return { 
 		      presets: {
 		        year : new Date().getFullYear(),
-		        name:"SvelteKit(Svelte 4.0.1): Material-Web(MWC v0.27.0)",
+		        name:"sveltekit-materialweb-boilerplate",
 		        title:"HOMEPAGE",
             subtitle:"subtitle",
 		        admin:"責任者氏名",

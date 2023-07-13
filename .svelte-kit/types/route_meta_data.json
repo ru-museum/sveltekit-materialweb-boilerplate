@@ -4,5 +4,8 @@
 	],
 	"/about": [
 		"src/routes/about/+page.js"
+	],
+	"/work": [
+		"src/routes/work/+page.js"
 	]
 }

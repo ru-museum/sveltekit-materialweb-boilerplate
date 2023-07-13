@@ -22,9 +22,9 @@ export function load() {
 		        title:"HOMEPAGE",
             subtitle:"subtitle",
 		        admin:"責任者氏名",
-		        mail : "sample&#64;yahoo.co.jp",
-		        creator:"藍土工房",
-		        creator_mail : 'land_koubou&#64;yahoo.co.jp'
+		        mail : "sample&#64;***.co.jp",
+		        creator:"○○工房",
+		        creator_mail : '***&#64;***.co.jp'
         	}
     };
 

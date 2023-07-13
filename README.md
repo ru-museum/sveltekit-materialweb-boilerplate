@@ -79,6 +79,7 @@ npm install
     ├── favicon.png
     └── robots.txt
 ```
+- ページの追加は、routes/&lt;**filename**&gt;/+page.js、+page.svelte で行います。
 - **material-icons** は最小限に止めてありますので、必要な場合はダウンロードし **_index.js** 及び以下のの記述に倣い導入して下さい。 
 - 他のパッケージの icon(svg) も 同様に使用出来ます。
 ## アイコンファイル(.svelte)作成例

@@ -8,9 +8,9 @@ Boilerplate for Sveltekit with Material-Web(MWC v0.27.0)
 - ページの増減は **Sveltekit** に準じています。
 
 # 使用方法
-- この **Boilerplate** の元となる **Sveltekit** は以下により生成されています。
+- この **Boilerplate** の基となる **Sveltekit** は以下により生成されています。
 ```
- npm create svelte@latest test01
+ npm create svelte@latest svelte-app
 
  Which Svelte app template?
 │  SvelteKit demo app
@@ -88,7 +88,7 @@ npm install
     │   └── +page.svelte
 ```
 ## アイコンファイル(.svelte)作成例
-- **material-icons** は最小限に止めていますので、必要な場合はダウンロードし **_index.js** 及び以下のの記述を参考に導入して下さい。 
+- **material-icons** は最小限に留めていますので、必要な場合は svg ファイルをダウンロードし **_index.js** 及び以下の記述を参考に導入して下さい。 
 - 他の ICON パッケージ (svg) も 同様に使用出来ます。
  
 【SVG アイコン】.svg  
@@ -114,6 +114,7 @@ npm run preview  // localhost:4173
 ```
 build 
 ├── _app
+│   └── (略)
 ├── data
 │   └── data-items.json
 ├── images

@@ -90,6 +90,7 @@ npm install
 ## アイコンファイル(.svelte)作成例
 - **material-icons** は最小限に止めてありますので、必要な場合はダウンロードし **_index.js** 及び以下のの記述に倣い導入して下さい。 
 - 他のパッケージの icon(svg) も 同様に使用出来ます。
+ 
 【SVG アイコン】.svg  
 ```
 <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><g>....(略)...</svg>

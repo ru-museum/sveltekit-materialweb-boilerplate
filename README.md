@@ -87,6 +87,22 @@ npm install
     │   ├── +page.js
     │   └── +page.svelte
 ```
+
+## メニューの追加
+- lib/data/**menues.js**へ追加します。
+- **CATEGORY** 全体の追加も可能です。
+```
+{
+  category: 'CATEGORY II',
+  items: [
+     {name:"HOME", ref:"/"},
+     {name:"WORK", ref:"work"},
+     {name:"ABOUT", ref:"about"},
+     {name:"NEWFILENAME", ref:"newfilename"} // 追加項目: 末尾の " , " は付加しません
+  ]
+},
+```
+
 ## アイコンファイル(.svelte)作成例
 - **material-icons** は最小限に留めていますので、必要な場合は svg ファイルをダウンロードし **_index.js** 及び以下の記述を参考に導入して下さい。 
 - 他の ICON パッケージ (svg) も 同様に使用出来ます。

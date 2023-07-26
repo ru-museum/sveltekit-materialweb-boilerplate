@@ -97,8 +97,9 @@ npm install
   items: [
      {name:"HOME", ref:"/"},
      {name:"WORK", ref:"work"},
+     {name:"NEWFILENAME１", ref:"newfilename1"},// 追加項目１
      {name:"ABOUT", ref:"about"},
-     {name:"NEWFILENAME", ref:"newfilename"} // 追加項目: 末尾の " , " は付加しません
+     {name:"NEWFILENAME２", ref:"newfilename2"} // 追加項目２: 最終行の末尾には " , " を付加しません
   ]
 },
 ```

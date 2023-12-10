@@ -1,5 +1,7 @@
 <script lang="ts">
+
   export let data;
+
 </script>
 
 <svelte:head>
@@ -10,6 +12,7 @@
 <div class="text-column">
 <h1 class="mdc-typography--headline4">{data.presets.name}</h1>
 <h1 class="mdc-typography--headline4">SvelteKit + Material-Web(MWC v0.27.0)</h1>
+
 <h1 class="mdc-typography--headline1">Home</h1>
 	<h2>
 		<strong>src/routes/+page.svelte</strong>
@@ -26,12 +29,3 @@
 
 </div>
 
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-</style>

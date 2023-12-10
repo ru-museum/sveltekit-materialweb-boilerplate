@@ -58,7 +58,8 @@
     <span slot="title">
       {pre.title}
       <span class="close-side">
-        <mwc-icon-button on:click="{()=> drawer.open = false}">
+        <mwc-icon-button on:click="{()=> drawer.open = false}"
+                         on:keydown role="button" tabindex="0">
           <Close size="0.6em" color="#03a9f4" />
         </mwc-icon-button>
       </span>
@@ -84,11 +85,6 @@
             <mwc-icon-button slot="navigationIcon">
               <MenuButton />
             </mwc-icon-button>
-            
-<!--
-            <mwc-icon-button icon="menu" slot="navigationIcon"></mwc-icon-button>
-            -->
-            
             <div slot="title" 
                  style="cursor:pointer;">
               <a href="/" rel="noreferrer" style="color:white;"> 
@@ -102,9 +98,13 @@
                             id="button{i}" 
                             raised 
                             label="{category}" 
-                            slot="actionItems"></mwc-button>
+                            slot="actionItems"
+                            on:keydown role="button"
+                            tabindex="0"></mwc-button>
                 <mwc-menu fixed id="menu{i}" corner="BOTTOM_START"
-                          on:click="{()=>{closeMenu(i)}}">
+                          on:click="{()=>{closeMenu(i)}}"
+                          on:keydown role="button"
+                          tabindex="{i}">
 
           	      {#each items as {name,ref}}    
                      <a href="{ref}" rel="noreferrer">
@@ -196,9 +196,6 @@
 
   .close-side {
     padding-left:60px;
-  }
-
-  .infoTitle{
   }
 
   .subtitle {

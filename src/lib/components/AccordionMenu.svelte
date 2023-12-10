@@ -28,7 +28,9 @@
     <mwc-list-item graphic="avatar"
                    on:click={toggle} 
                    aria-expanded={isOpen}
-                   on:keydowny>
+                   on:keydown
+                   role="button"
+                   tabindex="0">
       <span class="item">
         {category}
       </span>
@@ -43,7 +45,9 @@
     <mwc-list-item graphic="avatar"
                    on:click={toggle}
                    aria-expanded={isOpen}
-                   on:keydowny>
+                   on:keydown
+                   role="button"
+                   tabindex="0">
       <span class="item">
         {category}
       </span>
@@ -61,10 +65,13 @@
         <mwc-list in:fly="{{ y: -20, duration: 800 }}" 
                   out:fly="{{ y: -10, duration: 400 }}"
                   class="open-list">
-	        {#each items as {name, ref}}
+	        {#each items as {name, ref}, i}
             <a href="{ref}" rel="noreferrer">
-                <mwc-list-item hasMeta on:click="{()=>close()}">
-<!--                <mwc-list-item hasMeta on:click="{()=>{close,drawer.open=false}">-->
+                <mwc-list-item hasMeta 
+                               on:click="{()=>close()}"
+                               on:keydown
+                               role="button"
+                               tabindex="{i}">
                   <span>{name}</span>
                   <mwc-icon slot="meta" class="open-list-icon">
                      <span><ArrowForward color="gray"/></span>
@@ -82,25 +89,6 @@
 <style>
 
 	.menus { width:100%; }
-
-	/* 
-	button {
-	  border: none; 
-	  background: none;
-	  display:block; 
-	  color: inherit; 
-	  font-size: 1em;
-	  font-family: Roboto;	  
-	  cursor: pointer; 
-	  margin: 0; 
-	  padding-bottom: 0.2em; 
-	  padding-top: 0.2em;
-	}
-	.middle, .item, .subItem{ vertical-align:middle; }
-	.item{ padding-top: 0px;	}
-	.subItem{ padding-top:0px; }
-	 
-	 */
 
   mwc-icon {
     background-color: gray;

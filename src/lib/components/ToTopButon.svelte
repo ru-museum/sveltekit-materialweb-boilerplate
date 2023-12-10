@@ -19,7 +19,7 @@
         
   <mwc-fab label="toTop"
            class="greenAndGray"
-           on:click="{() => toTop()}">
+           on:click="{() => toTop()}" on:keydown role="button" tabindex="0">
     <mwc-icon slot="icon">
       <ArrowUpward size="2em" />  
     </mwc-icon>

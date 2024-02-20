@@ -2,8 +2,7 @@
 // https://tauri.app/v1/guides/getting-started/setup/sveltekit/
 import adapter from '@sveltejs/adapter-static' // This was changed from adapter-auto
 import preprocess from 'svelte-preprocess'
-import { vitePreprocess } from '@sveltejs/kit/vite';
-
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

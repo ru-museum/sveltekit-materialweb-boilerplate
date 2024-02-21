@@ -19,6 +19,8 @@ SyntaxError: The requested module '@sveltejs/kit/vite' does not provide an expor
 - import { vitePreprocess } from '@sveltejs/kit/vite';
 + import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 ```
+　　参照：[**vitePreprocess**](https://kit.svelte.dev/docs/integrations#preprocessors-vitepreprocess) // SVELTEKIT/Docs
+
 
 2023-12-10  
 - 各パッケージのバージョンをアップデートしました（svelte 4.2.8）。  

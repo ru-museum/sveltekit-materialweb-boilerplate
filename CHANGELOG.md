@@ -1,5 +1,8 @@
 # sveltekit-materialweb-boilerplate changelog
 
+2024-08-25  
+- 各パッケージのバージョンをアップデートしました（svelte 4.2.19）。
+
 2024-02-21  
 - 各パッケージのバージョンをアップデートしました（svelte 4.2.11）。  
 - vite 5.1.3 へのバージョンアップによる不具合の為、  

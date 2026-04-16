@@ -1,5 +1,5 @@
 
-<script type="module">
+<script>
   export let pre;  
 
 	import { page } from '$app/stores';

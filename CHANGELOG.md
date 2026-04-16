@@ -1,5 +1,9 @@
 # sveltekit-materialweb-boilerplate changelog
 
+2026-04-17  
+- 各パッケージのバージョンをアップデートしました（svelte 5.55.4）。
+- **FIX**：package.json へのパッケージ **svelte-preprocess** の追加を行いました。
+
 2024-08-25  
 - 各パッケージのバージョンをアップデートしました（svelte 4.2.19）。
 
